@@ -1,0 +1,22 @@
+{
+  "name": "node-currency-converter-with-async-await",
+  "version": "1.0.0",
+  "description": "",
+  "main": "currency-convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heminjohnson/Node-Currency-Converter-with-Async-Await.git"
+  },
+  "author": "Hemin Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heminjohnson/Node-Currency-Converter-with-Async-Await/issues"
+  },
+  "homepage": "https://github.com/heminjohnson/Node-Currency-Converter-with-Async-Await#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
