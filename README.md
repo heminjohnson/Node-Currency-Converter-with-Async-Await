@@ -1,4 +1,4 @@
-# Node-Currency_Converter-with-Async-Await
+# Node-Currency-Converter-with-Async-Await
 
 ### Getting Started
 
