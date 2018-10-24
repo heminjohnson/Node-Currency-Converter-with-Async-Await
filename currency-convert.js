@@ -7,6 +7,15 @@ const getExchangeRate = async (from, to) => {
   return rate
 }
 
+const getCountries = async (currencyCode) => {
+  const response = await axios.get(`https://restcountries.eu/rest/v2/currency/${currencyCode}`)
+  return response.data.map((country) => country.name)
+}
+
 getExchangeRate('USD', 'CAD').then((rate) => {
   console.log(rate)
+})
+
+getCountries('CAD').then((countries) => {
+  console.log(countries)
 })
