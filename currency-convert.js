@@ -12,10 +12,13 @@ const getCountries = async (currencyCode) => {
   return response.data.map((country) => country.name)
 }
 
-getExchangeRate('USD', 'CAD').then((rate) => {
-  console.log(rate)
-})
+const convertCurrency = async (from, to, amount) => {
+  const rate = await getExchangeRate(from, to)
+  const countries = await getCountries(to)
+  const convertedAmount = (amount * rate).toFixed(2)
+  return `${amount} ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries: ${countries.join(', ')}`
+}
 
-getCountries('CAD').then((countries) => {
-  console.log(countries)
+convertCurrency('EUR', 'INR', 100).then((message) => {
+  console.log(message)
 })
